@@ -8,7 +8,7 @@ body{
 }
 
 .header{
-  position:sticky;
+  position:fixed;
   top: 0;
   bottom: 0;
   display: flex;
@@ -19,6 +19,7 @@ body{
   width: 100vw;
   background-color: rgb(73, 73, 73);
   border-bottom: 1px solid #fff;
+  z-index: 2;
 }
 
 .header a{
@@ -51,7 +52,7 @@ body{
   font-size: 3rem;
   font-weight:100;
   text-transform:capitalize;
-  margin: 115px 0 0 0;
+  margin: 160px 0 0 0;
   font-weight:200;
 }
 .about h2{
@@ -106,13 +107,14 @@ body{
   height: 40px;
   filter: brightness(150%);
   transition: 0.5s;
+  z-index: 1;
 }
 .icons img:hover{
   filter: brightness(100%);
   transition: 0.5s;
 }
 .projects{
-  margin-top: 50px;
+  margin-top: 110px;
   text-align: center;
 }
 .projects h3{
@@ -120,9 +122,9 @@ body{
   font-weight:100;
   text-transform:capitalize;
   font-weight:200;
-  margin: 100px 0 70px 0;
+  margin: 100px 0 50px 0;
 }
-.project-cards{
+.project-cards-slider{
   display: flex;
   justify-content: space-around;
   padding: 10px;
@@ -148,46 +150,39 @@ body{
   border-color: #ddd;
   background-color: rgb(80, 81, 83);
 }
-.card{
+.card1{
   border: 2px solid #ddd;
   border-radius: 30px;
   font-size: 20px;
-  height: 450px;
-  width: 300px;
+  height: 350px;
+  width: 700px;
   padding: 30px;
   text-align: justify;
-  transition: 0.7s;
+  transition: 2s;
+  position: relative;
+  background-image: url(images/BCR-Barbearia.png);
+  background-size: cover;
+  background-position: top;
+  background-color: #ccc;
 }
-.card:hover{
+.card1:hover{
   background-color: rgb(80, 81, 83);
-  transition: 0.7s;
-  transform: scale(1.02);
+  transition: 2s;
   cursor: pointer;
 }
-.image-project{
-  height: 150px;
-  width: auto;
-  background-color: rgb(36, 36, 36);
-  text-align: center;
-  border-radius: 30px;
-  margin-bottom: 30px;
-}
-.card h4{
-  text-align: center;
-  margin-bottom: 30px;
-}
-.card p{
-  margin-bottom:55px;
-}
-.card a img{
+
+.card1 a img{
   position: relative;
   width: 30px;
   height: 30px;
   margin:0 15px;
-  left: 31%;
+  left: 41%;
+  top: 113%;
+  filter: brightness(150%);
+
 }
 .skills{
-  margin-top: 50px;
+  margin-top: 70px;
   text-align: center;
 }
 .skills h3{
